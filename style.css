@@ -105,10 +105,6 @@
 .show {
   display: block;
 }
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
 
 input:invalid {
   border: 2px dashed red;
