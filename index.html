@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal__dialog">
+        <div class="modal__content">
+          <form>
+            <div class="modal__title">Регистрация на сайте</div>
+            <label for="name">Ваше имя:</label>
+            <input
+              required
+              placeholder="Введите имя"
+              name="name"
+              type="text"
+              required
+              pattern="^[а-яА-ЯёЁa-zA-Z]+$"
+              class="modal__input"
+            />
+            <label for="surname">Ваша фамилия:</label>
+            <input
+              required
+              placeholder="Введите фамилию"
+              name="surname"
+              type="text"
+              pattern="^[а-яА-ЯёЁa-zA-Z]+$"
+              required
+              class="modal__input"
+            />
+            <label for="phone">Ваш номер телефона:</label>
+            <input
+              required
+              placeholder="Используйте формат: +77777777777"
+              name="phone"
+              type="tel"
+              required
+              pattern="[+]7\d{3}\d{3}\d{2}\d{2}"
+              class="modal__input"
+            />
+            <label for="email">Ваш email:</label>
+            <input
+              required
+              placeholder="Введите email"
+              name="email"
+              type="email"
+              pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$"
+              required
+              class="modal__input"
+            />
+            <label for="login">Придумайте логин:</label>
+            <input
+              required
+              placeholder="Только латинские буквы и цифры"
+              name="login"
+              type="text"
+              required
+              pattern="^[a-zA-Z0-9]+$"
+              class="modal__input"
+            />
+            <label for="password">Придумайте пароль:</label>
+            <input
+              required
+              placeholder="Минимальная длина 8 символов"
+              name="password"
+              type="password"
+              required
+              minlength="8"
+              pattern="^[a-zA-Z0-9]+$"
+              class="modal__input"
+            />
+            <div class="modal__captcha">
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                data-callback="removeFakeCaptcha"
+                required
+              ></div>
+              <input
+                type="checkbox"
+                class="captcha-fake-field"
+                tabindex="-1"
+                required
+              />
+            </div>
+
+            <button class="btn btn_dark btn_min">Зарегистрироваться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
